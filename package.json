@@ -20,7 +20,7 @@
     "miqdad"
   ],
   "author": "Miqdad Abdurrahman Fawwaz",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "engines": {
     "node": ">=12",
     "npm": ">=6"
