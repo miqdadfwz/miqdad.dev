@@ -1,10 +1,7 @@
 <div align="left">
-  <img src="https://user-images.githubusercontent.com/43945767/116423362-d0528200-a86a-11eb-80b3-4a419734b076.png" height="auto" width="500px" height="500px" alt="logo" />
-  <h1>miqdad.dev — V1</h1>
-  <a href="https://miqdad.dev">miqdad.dev</a> personal overview website
+  <img src="https://user-images.githubusercontent.com/43945767/116423362-d0528200-a86a-11eb-80b3-4a419734b076.png" height="auto" width="125px" alt="logo" />
+  <h2>miqdad.dev — V1</h2>
 </div>
-
----
 
 <!-- prettier-ignore-start -->
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/miqdadfwz/miqdad.dev/graphs/commit-activity)
