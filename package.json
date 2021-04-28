@@ -1,0 +1,80 @@
+{
+  "name": "miqdaddev",
+  "version": "0.0.1",
+  "description": "Miqdad Personal Website",
+  "main": "index.js",
+  "scripts": {
+    "dev:assets": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "dev:site": "cross-env NODE_ENV=development eleventy --serve",
+    "dev": "run-p dev:*",
+    "build": "run-s clean build:*",
+    "build:assets": "webpack --mode production",
+    "build:site": "eleventy",
+    "clean": "rm -rf ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miqdadfwz/miqdad.dev.git"
+  },
+  "keywords": [
+    "miqdad"
+  ],
+  "author": "Miqdad Abdurrahman Fawwaz",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "bugs": {
+    "url": "https://github.com/miqdadfwz/miqdad.dev/issues"
+  },
+  "homepage": "https://github.com/miqdadfwz/miqdad.dev#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "@types/node": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.4",
+    "cssnano": "^5.0.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "esbuild-loader": "^2.12.0",
+    "eslint": "^7.25.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.5.4",
+    "mini-css-extract-plugin": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.13",
+    "postcss-loader": "^5.2.0",
+    "prettier": "^2.2.1",
+    "simple-progress-webpack-plugin": "^2.0.0",
+    "tailwindcss": "^2.1.2",
+    "webpack": "^5.36.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-manifest-plugin": "^3.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "lint-staged": {
+    "*.{css,html,json,jsx,js,ts,tsx}": [
+      "prettier --write"
+    ],
+    "*.{jsx, js, ts, tsx}": [
+      "tsc --noEmit && eslint"
+    ]
+  }
+}
