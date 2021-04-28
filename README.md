@@ -4,8 +4,6 @@
   <a href="https://miqdad.dev">miqdad.dev</a> personal overview website
 </div>
 
----
-
 <!-- prettier-ignore-start -->
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/miqdadfwz/miqdad.dev/graphs/commit-activity)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
