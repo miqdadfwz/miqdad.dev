@@ -1,3 +1,7 @@
-const log = (message: string) => console.log(message);
+console.log('halo');
 
-log('Hello World');
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}

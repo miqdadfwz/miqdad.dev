@@ -1,11 +1,13 @@
 const path = require('path');
+const WebpackBar = require('webpackbar');
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
+const { InjectManifest } = require('workbox-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
-const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
-const filename = isDev ? 'index' : 'index.[contenthash]';
+const fileName = isDev ? 'index' : 'index.[contenthash]';
+const chunkName = isDev ? 'chunk.[name]' : 'chunk.[name].[contenthash]';
 
 module.exports = {
   target: 'web',
@@ -14,9 +16,12 @@ module.exports = {
     path.resolve(__dirname, 'src', 'assets', 'styles', 'index.css'),
   ],
   output: {
+    filename: `${fileName}.js`,
+    publicPath: 'assets/',
+    chunkFilename: `${chunkName}.js`,
     path: path.resolve(__dirname, 'dist', 'assets'),
-    filename: `${filename}.js`,
   },
+  resolve: { extensions: ['.js', '.ts'] },
   mode: isDev ? 'development' : 'production',
   devtool: isDev ? 'cheap-module-source-map' : false,
   optimization: {
@@ -54,8 +59,13 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCSSExtractPlugin({ filename: `${filename}.css` }),
-    new WebpackManifestPlugin({ publicPath: '/src/assets/' }),
-    new SimpleProgressWebpackPlugin({ format: 'minimal' }),
+    new MiniCSSExtractPlugin({ filename: `${fileName}.css` }),
+    new WebpackManifestPlugin({ fileName: 'build.json' }),
+    new InjectManifest({
+      swSrc: path.resolve('src', 'sw.ts'),
+      swDest: path.resolve('dist', 'sw.js'),
+      include: [/index.*\.js$/, /index.*\.css$/],
+    }),
+    new WebpackBar({ basic: !isDev }),
   ],
 };

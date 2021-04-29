@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const isDev = process.env.NODE_ENV === 'development';
-const manifestPath = path.resolve(__dirname, 'dist', 'assets', 'manifest.json');
+const manifestPath = path.resolve(__dirname, 'dist', 'build.json');
 const manifest = isDev
   ? {
       'main.js': '/assets/index.js',
@@ -20,9 +20,19 @@ module.exports = (eleventyConfig) => {
     return manifest['main.js'] ? `<script defer="defer" src="${manifest['main.js']}" ></script>` : '';
   });
 
-  eleventyConfig.addPassthroughCopy({ 'src/static': '/' });
+  eleventyConfig.addPassthroughCopy({ 'src/static': '/static', 'src/manifest.json': '' });
 
-  eleventyConfig.setBrowserSyncConfig({ files: [manifestPath] });
+  eleventyConfig.setBrowserSyncConfig({
+    files: [manifestPath],
+    ...(isDev
+      ? {
+          https: {
+            cert: path.resolve('ssl', 'localhost+2.pem'),
+            key: path.resolve('ssl', 'localhost+2-key.pem'),
+          },
+        }
+      : {}),
+  });
 
   return {
     passthroughFileCopy: true,

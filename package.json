@@ -6,7 +6,7 @@
   "scripts": {
     "dev:assets": "cross-env NODE_ENV=development webpack --mode development --watch",
     "dev:site": "cross-env NODE_ENV=development eleventy --serve",
-    "dev": "run-p dev:*",
+    "dev": "pnpm run clean && run-p dev:*",
     "build": "run-s clean build:*",
     "build:assets": "webpack --mode production",
     "build:site": "eleventy",
@@ -56,11 +56,11 @@
     "postcss": "^8.2.13",
     "postcss-loader": "^5.2.0",
     "prettier": "^2.2.1",
-    "simple-progress-webpack-plugin": "^2.0.0",
     "tailwindcss": "^2.1.2",
     "webpack": "^5.36.0",
     "webpack-cli": "^4.6.0",
-    "webpack-manifest-plugin": "^3.1.1"
+    "webpack-manifest-plugin": "^3.1.1",
+    "webpackbar": "^5.0.0-3"
   },
   "husky": {
     "hooks": {
@@ -76,5 +76,13 @@
     "*.{jsx, js, ts, tsx}": [
       "tsc --noEmit && eslint"
     ]
+  },
+  "dependencies": {
+    "workbox-cacheable-response": "^6.1.5",
+    "workbox-expiration": "^6.1.5",
+    "workbox-precaching": "^6.1.5",
+    "workbox-routing": "^6.1.5",
+    "workbox-strategies": "^6.1.5",
+    "workbox-webpack-plugin": "^6.1.5"
   }
 }
