@@ -13,12 +13,20 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addLayoutAlias('base', 'base.njk');
 
   eleventyConfig.addShortcode('bundledCSS', function () {
-    return manifest['main.css'] ? `<link href="${manifest['main.css']}" rel="stylesheet" />` : '';
+    return manifest['main.css'] ? `<link href="${manifest['main.css']}" rel="stylesheet"></link>` : '';
   });
 
   eleventyConfig.addShortcode('bundledJS', function () {
-    return manifest['main.js'] ? `<script defer="defer" src="${manifest['main.js']}" ></script>` : '';
+    return manifest['main.js'] ? `<script defer="defer" src="${manifest['main.js']}"></script>` : '';
   });
+
+  eleventyConfig.addShortcode('preloadCSS', function() {
+    return manifest['main.css'] ? `<link rel="preload" href="${manifest['main.css']}" as="style"></link>` : '';
+  })
+
+  eleventyConfig.addShortcode('preloadJS', function() {
+    return manifest['main.js'] ? `<link rel="preload" href="${manifest['main.js']}" as="script"></link>` : '';
+  })
 
   eleventyConfig.addPassthroughCopy({ 'src/static': '/static', 'src/manifest.json': '' });
 
