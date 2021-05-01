@@ -64,7 +64,7 @@ module.exports = {
     new InjectManifest({
       swSrc: path.resolve('src', 'sw.ts'),
       swDest: path.resolve('dist', 'sw.js'),
-      include: [/index.*\.js$/, /index.*\.css$/],
+      include: [/index.*\.js$/, /index.*\.css$/, /miqdad-bw\.png/, ],
     }),
     new WebpackBar({ basic: !isDev }),
   ],

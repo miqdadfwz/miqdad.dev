@@ -1,0 +1,21 @@
+<header class="w-full flex align-items justify-between mb-6 pb-2 border-b">
+    <a href="/" class="font-mono font-semibold text-lg tracking-wider hover:text-black mb-3 transition-colors duration-500">
+        {{ site.title }}
+    </a>
+    <nav role="navigation" aria-label="Main" class="flex align-items">
+        <ul class="flex align-center spacing-x-4">
+            {%- for item in collections.all | eleventyNavigation -%}
+            {%- set isCurrent = (item.url == page.url) -%}
+            {%- set isParent = item.url != '/' and item.url in page.url -%}
+            <li class="mr-4">
+                <a
+                    href="{% if isCurrent %}#content{% else %}{{ item.url | url }}{% endif %}"
+                    {% if isCurrent %}aria-current="page"{% endif %}
+                >
+                    {{ item.title }}
+                </a>
+            </li>
+            {%- endfor -%}
+        </ul>
+    </nav>
+</header>

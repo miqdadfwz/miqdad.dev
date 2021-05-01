@@ -1,5 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+
+const pluginRSS = require('@11ty/eleventy-plugin-rss');
+const pluginGoogleFonts = require('eleventy-google-fonts');
+const pluginLazyImage = require('eleventy-plugin-lazyimages');
+const pluginNavigation = require('@11ty/eleventy-navigation');
+
 const isDev = process.env.NODE_ENV === 'development';
 const manifestPath = path.resolve(__dirname, 'dist', 'build.json');
 const manifest = isDev
@@ -10,6 +16,11 @@ const manifest = isDev
   : JSON.parse(fs.readFileSync(manifestPath, { encoding: 'utf8' }));
 
 module.exports = (eleventyConfig) => {
+  eleventyConfig.addPlugin(pluginRSS);
+  eleventyConfig.addPlugin(pluginLazyImage);
+  eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginGoogleFonts);
+
   eleventyConfig.addLayoutAlias('base', 'base.njk');
 
   eleventyConfig.addShortcode('bundledCSS', function () {
@@ -20,15 +31,15 @@ module.exports = (eleventyConfig) => {
     return manifest['main.js'] ? `<script defer="defer" src="${manifest['main.js']}"></script>` : '';
   });
 
-  eleventyConfig.addShortcode('preloadCSS', function() {
+  eleventyConfig.addShortcode('preloadCSS', function () {
     return manifest['main.css'] ? `<link rel="preload" href="${manifest['main.css']}" as="style"></link>` : '';
-  })
+  });
 
-  eleventyConfig.addShortcode('preloadJS', function() {
+  eleventyConfig.addShortcode('preloadJS', function () {
     return manifest['main.js'] ? `<link rel="preload" href="${manifest['main.js']}" as="script"></link>` : '';
-  })
+  });
 
-  eleventyConfig.addPassthroughCopy({ 'src/static': '/static', 'src/manifest.json': '' });
+  eleventyConfig.addPassthroughCopy({ 'src/static': '/static', 'src/manifest.json': '', 'src/robots.txt': '' });
 
   eleventyConfig.setBrowserSyncConfig({
     files: [manifestPath],

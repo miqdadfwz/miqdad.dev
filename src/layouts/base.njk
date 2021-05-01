@@ -26,12 +26,19 @@
     <link rel="apple-touch-icon" sizes="192x192" href="/static/pwa/m-icon-192.png"/>
 
     <link href="https://twitter.com/miqdadfwz" rel="me"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    {% eleventyGoogleFonts 'https://fonts.googleapis.com/css2?family=PT+Serif&display=swap' %}
+
     {% preloadJS %}
     {% preloadCSS %}
     {% bundledCSS %}
 </head>
-<body class="bg-gray-50">
-    {{ content | safe }}
-    {% bundledJS %}
+<body>
+    <div class="max-w-3xl mx-auto pt-6 px-6 lg:pt-12 lg:px-12">
+        {% include "header.njk" %}
+        {{ content | safe }}
+        {% bundledJS %}
+    </div>
 </body>
 </html>
