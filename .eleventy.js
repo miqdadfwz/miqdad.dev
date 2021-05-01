@@ -17,7 +17,9 @@ const manifest = isDev
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRSS);
-  eleventyConfig.addPlugin(pluginLazyImage);
+  eleventyConfig.addPlugin(pluginLazyImage, {
+    imageSelector: '#photo',
+  });
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginGoogleFonts);
 
