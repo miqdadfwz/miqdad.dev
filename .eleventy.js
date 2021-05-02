@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
+const pluginSEO = require('eleventy-plugin-seo');
 const pluginRSS = require('@11ty/eleventy-plugin-rss');
 const pluginGoogleFonts = require('eleventy-google-fonts');
 const pluginLazyImage = require('eleventy-plugin-lazyimages');
@@ -17,11 +18,18 @@ const manifest = isDev
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRSS);
+  eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginGoogleFonts);
+
+  eleventyConfig.addPlugin(pluginSEO, require('./src/data/seo.json'), {
+    titleStyle: 'minimalistic',
+    titleDivider: '|',
+    imageWithBaseUrl: true,
+  });
+
   eleventyConfig.addPlugin(pluginLazyImage, {
     imageSelector: '#photo',
   });
-  eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(pluginGoogleFonts);
 
   eleventyConfig.addLayoutAlias('base', 'base.njk');
 

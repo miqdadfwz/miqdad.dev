@@ -4,13 +4,13 @@
   "description": "Miqdad Personal Website",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf ./dist",
+    "build:assets": "webpack --mode production",
+    "build:site": "eleventy",
+    "build": "run-s clean build:*",
     "dev:assets": "cross-env NODE_ENV=development webpack --mode development --watch",
     "dev:site": "cross-env NODE_ENV=development eleventy --serve",
     "dev": "pnpm run clean && run-p dev:*",
-    "build": "run-s clean build:*",
-    "build:assets": "webpack --mode production",
-    "build:site": "eleventy",
-    "clean": "rm -rf ./dist",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
@@ -50,6 +50,7 @@
     "cz-conventional-changelog": "3.3.0",
     "eleventy-google-fonts": "0.0.5",
     "eleventy-plugin-lazyimages": "2.1.0",
+    "eleventy-plugin-seo": "^0.5.1",
     "esbuild-loader": "2.12.0",
     "eslint": "7.25.0",
     "eslint-config-google": "0.14.0",
@@ -63,13 +64,14 @@
     "postcss-loader": "5.2.0",
     "prettier": "2.2.1",
     "tailwindcss": "2.1.2",
+    "typescript": "^4.2.4",
     "webpack": "5.36.2",
     "webpack-cli": "4.6.0",
     "webpack-manifest-plugin": "3.1.1",
     "webpackbar": "5.0.0-3"
   },
   "lint-staged": {
-    "*.{css,html,json,jsx,js,ts,tsx}": [
+    "*.{css,html,json,js,ts}": [
       "prettier --write"
     ]
   },
