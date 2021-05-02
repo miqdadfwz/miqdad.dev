@@ -10,7 +10,9 @@
     "build": "run-s clean build:*",
     "build:assets": "webpack --mode production",
     "build:site": "eleventy",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf ./dist",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -53,7 +55,7 @@
     "eslint-config-google": "0.14.0",
     "eslint-config-prettier": "7.2.0",
     "eslint-plugin-prettier": "3.4.0",
-    "husky": "4.3.8",
+    "husky": "6.0.0",
     "lint-staged": "10.5.4",
     "mini-css-extract-plugin": "1.6.0",
     "npm-run-all": "4.1.5",
@@ -66,19 +68,9 @@
     "webpack-manifest-plugin": "3.1.1",
     "webpackbar": "5.0.0-3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
   "lint-staged": {
     "*.{css,html,json,jsx,js,ts,tsx}": [
       "prettier --write"
-    ],
-    "*.{jsx, js, ts, tsx}": [
-      "tsc --noEmit && eslint"
     ]
   },
   "dependencies": {
@@ -88,5 +80,10 @@
     "workbox-routing": "^6.1.5",
     "workbox-strategies": "^6.1.5",
     "workbox-webpack-plugin": "^6.1.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
