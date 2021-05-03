@@ -23,7 +23,7 @@ specifiers:
   esbuild-loader: 2.12.0
   eslint: 7.25.0
   eslint-config-google: 0.14.0
-  eslint-config-prettier: 7.2.0
+  eslint-config-prettier: 8.3.0
   eslint-plugin-prettier: 3.4.0
   husky: 6.0.0
   lint-staged: 10.5.4
@@ -76,8 +76,8 @@ devDependencies:
   esbuild-loader: 2.12.0_webpack@5.36.2
   eslint: 7.25.0
   eslint-config-google: 0.14.0_eslint@7.25.0
-  eslint-config-prettier: 7.2.0_eslint@7.25.0
-  eslint-plugin-prettier: 3.4.0_7e432d1c9ddfa16d0ce4e281dda60644
+  eslint-config-prettier: 8.3.0_eslint@7.25.0
+  eslint-plugin-prettier: 3.4.0_ed07edc0d33fb90bb2bebf56b9b5e0f9
   husky: 6.0.0
   lint-staged: 10.5.4
   mini-css-extract-plugin: 1.6.0_webpack@5.36.2
@@ -3535,8 +3535,8 @@ packages:
       eslint: 7.25.0
     dev: true
 
-  /eslint-config-prettier/7.2.0_eslint@7.25.0:
-    resolution: {integrity: sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==}
+  /eslint-config-prettier/8.3.0_eslint@7.25.0:
+    resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -3544,7 +3544,7 @@ packages:
       eslint: 7.25.0
     dev: true
 
-  /eslint-plugin-prettier/3.4.0_7e432d1c9ddfa16d0ce4e281dda60644:
+  /eslint-plugin-prettier/3.4.0_ed07edc0d33fb90bb2bebf56b9b5e0f9:
     resolution: {integrity: sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -3556,7 +3556,7 @@ packages:
         optional: true
     dependencies:
       eslint: 7.25.0
-      eslint-config-prettier: 7.2.0_eslint@7.25.0
+      eslint-config-prettier: 8.3.0_eslint@7.25.0
       prettier: 2.2.1
       prettier-linter-helpers: 1.0.0
     dev: true
