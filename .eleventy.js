@@ -4,7 +4,6 @@ const path = require('path');
 const pluginSEO = require('eleventy-plugin-seo');
 const pluginRSS = require('@11ty/eleventy-plugin-rss');
 const pluginGoogleFonts = require('eleventy-google-fonts');
-const pluginLazyImage = require('eleventy-plugin-lazyimages');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 
 const isDev = process.env.NODE_ENV === 'development';
@@ -25,10 +24,6 @@ module.exports = (eleventyConfig) => {
     titleStyle: 'minimalistic',
     titleDivider: '|',
     imageWithBaseUrl: true,
-  });
-
-  eleventyConfig.addPlugin(pluginLazyImage, {
-    imageSelector: '#photo',
   });
 
   eleventyConfig.addLayoutAlias('base', 'base.njk');
