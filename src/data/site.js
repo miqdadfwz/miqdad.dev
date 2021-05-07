@@ -1,6 +1,6 @@
 module.exports = {
   title: 'miqdad.dev',
-  description: 'Eleventy project with Webpack and Tailwind CSS',
+  description: 'Personal website of Miqdad A. Fawwaz',
   url: 'http://miqdad.dev',
   twitter: 'https://twitter.com/miqdadfwz',
   github: 'https://github.com/miqdadfwz',
