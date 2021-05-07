@@ -1,4 +1,6 @@
 dependencies:
+  markdown-it: 12.0.6
+  markdown-it-anchor: 7.1.0_markdown-it@12.0.6
   workbox-cacheable-response: 6.1.5
   workbox-expiration: 6.1.5
   workbox-navigation-preload: 6.1.5
@@ -10,9 +12,11 @@ devDependencies:
   '@11ty/eleventy': 0.12.1
   '@11ty/eleventy-navigation': 0.2.0_@11ty+eleventy@0.12.1
   '@11ty/eleventy-plugin-rss': 1.1.1_@11ty+eleventy@0.12.1
+  '@11ty/eleventy-plugin-syntaxhighlight': 3.1.0_@11ty+eleventy@0.12.1
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@fullhuman/postcss-purgecss': 4.0.3_postcss@8.2.13
+  '@tailwindcss/typography': 0.4.0_tailwindcss@2.1.2
   '@types/node': 15.0.1
   '@typescript-eslint/eslint-plugin': 4.22.0_e3b52a83531895e7febd6ecd5ba813eb
   '@typescript-eslint/parser': 4.22.0_eslint@7.25.0+typescript@4.2.4
@@ -23,6 +27,7 @@ devDependencies:
   cz-conventional-changelog: 3.3.0
   eleventy-google-fonts: 0.0.5
   eleventy-plugin-seo: 0.5.1
+  eleventy-plugin-time-to-read: 1.0.0_@11ty+eleventy@0.12.1
   esbuild-loader: 2.12.0_webpack@5.36.2
   eslint: 7.25.0
   eslint-config-google: 0.14.0_eslint@7.25.0
@@ -30,6 +35,7 @@ devDependencies:
   eslint-plugin-prettier: 3.4.0_ed07edc0d33fb90bb2bebf56b9b5e0f9
   husky: 6.0.0
   lint-staged: 10.5.4
+  luxon: 1.26.0
   mini-css-extract-plugin: 1.6.0_webpack@5.36.2
   npm-run-all: 4.1.5
   postcss: 8.2.13
@@ -67,6 +73,16 @@ packages:
       '@11ty/eleventy': '>=0.11.0'
     resolution:
       integrity: sha512-kHWXD2P7b05+SdWwh1oar4zToJfJvrBK4GS66P1kFHtXHeMbjcFQREZgf0YpWZEYz9ez0RQOpK0uuwKgyDOPAg==
+  /@11ty/eleventy-plugin-syntaxhighlight/3.1.0_@11ty+eleventy@0.12.1:
+    dependencies:
+      '@11ty/eleventy': 0.12.1
+      linkedom: 0.5.6
+      prismjs: 1.23.0
+    dev: true
+    peerDependencies:
+      '@11ty/eleventy': '>=0.5.4'
+    resolution:
+      integrity: sha512-Zb+34UlXsC5ZU22LZJISdbh7UzzWosUJrB6cSuvaEGUlp8+gF6ZUm+JYUpB7O8sENDtZqCzATilGk+UejKRw6Q==
   /@11ty/eleventy/0.12.1:
     dependencies:
       '@11ty/dependency-tree': 1.0.0
@@ -1419,6 +1435,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-yBMPqmd1yEJo/280PAMkychuaALyQ9Lkb5q1ck3mjJrFuEobIfhnQ4J3mbvBoISmR3SWMWV+cGB/I0lCQee79A==
+  /@tailwindcss/typography/0.4.0_tailwindcss@2.1.2:
+    dependencies:
+      lodash.castarray: 4.4.0
+      lodash.isplainobject: 4.0.6
+      lodash.merge: 4.6.2
+      lodash.uniq: 4.5.0
+      tailwindcss: 2.1.2_941a81a5c9afb5d3c8bce0db60f786b1
+    dev: true
+    peerDependencies:
+      tailwindcss: 2.0.0-alpha.24 || ^2.0.0
+    resolution:
+      integrity: sha512-3BfOYT5MYNEq81Ism3L2qu/HRP2Q5vWqZtZRQqQrthHuaTK9qpuPfbMT5WATjAM5J1OePKBaI5pLoX4S1JGNMQ==
   /@trysound/sax/0.1.1:
     dev: true
     engines:
@@ -1577,6 +1605,10 @@ packages:
       node: ^8.10.0 || ^10.13.0 || >=11.10.1
     resolution:
       integrity: sha512-nnMu4F+s4o0sll6cBSsTeVsT4cwxB7zECK3dFxzEjPBii9xLpq4yqqsy/FU5zMfan6G60DKZSCXAa3sHJZrcYw==
+  /@ungap/event-target/0.2.2:
+    dev: true
+    resolution:
+      integrity: sha512-z0bsRd8APns6CDBVEPEj3p82TiFc1UY8uWNhL+T0ydpQqnpHyPVwwgJ4FC5KP85sLbg80+g+h644UTatwKNi/g==
   /@webassemblyjs/ast/1.11.0:
     dependencies:
       '@webassemblyjs/helper-numbers': 1.11.0
@@ -1892,6 +1924,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
+  /argparse/2.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==
   /arr-diff/4.0.0:
     dev: true
     engines:
@@ -2466,6 +2502,15 @@ packages:
     dev: true
     resolution:
       integrity: sha512-GRMWDxpOB6Dgk2E5Uo+3eEBvtOOlimMmpbFiKuLFnQzYDavtLFY3K5ona41jgN/WdRZtG7utuVSVTL4HbZHGkw==
+  /clipboard/2.0.8:
+    dependencies:
+      good-listener: 1.2.2
+      select: 1.1.2
+      tiny-emitter: 2.1.0
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-Y6WO0unAIQp5bLmk1zdThRhgJt/x3ks6f30s3oE3H1mgIEU33XyQjEf8gsf6DxC7NPX8Y1SsNWjUjL/ywLnnbQ==
   /cliui/6.0.0:
     dependencies:
       string-width: 4.2.2
@@ -3078,6 +3123,11 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-wSyYHQZ4RshLyvhiz/kw2Qf/0ag=
+  /delegate/3.2.0:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
   /depd/1.1.2:
     dev: true
     engines:
@@ -3238,6 +3288,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-rNzVeGGsUWBOW74JaP/7po5EbYttF8+fMMXwYzhkV6gYFXOwouVnadrHoyTcHJLwh9kJXx5WAOPIBSyghYmXPA==
+  /eleventy-plugin-time-to-read/1.0.0_@11ty+eleventy@0.12.1:
+    dependencies:
+      '@11ty/eleventy': 0.12.1
+    dev: true
+    engines:
+      node: '>=13.0.0'
+    peerDependencies:
+      '@11ty/eleventy': ^0.11.0
+    resolution:
+      integrity: sha512-UvgwuyW0xCwAwwjDaoiCSCdjHqsnCidLSykvn5EkmKVFDkcFfzJTrVhJgQW3ZyMTuFqaOX+prl6N2NSIgdYPGg==
   /emitter-mixin/0.0.3:
     dev: true
     resolution:
@@ -3322,6 +3382,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-MyoZ0jgnLvB2X3Lg5HqpFmn1kybDiIfEQmKzTb5apr51Rb+T3KdmMiqa70T+bhGnyv7bQ6WMj2QMHpGMmlrUYQ==
+  /entities/2.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w==
   /entities/2.2.0:
     dev: true
     resolution:
@@ -4099,6 +4163,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-69hGZ8oNuzMLmbz8aOrCvFQ3Dg0=
+  /good-listener/1.2.2:
+    dependencies:
+      delegate: 3.2.0
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=
   /graceful-fs/4.2.6:
     resolution:
       integrity: sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==
@@ -4258,6 +4329,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-8nxjcBcd8wovbeKx7h3wTji4e6+rhaVuPNpMqwWgnHh+N9ToqsCs6XztWRBPQ+UtzsoMAdKZtUENoVzU/EMtZA==
+  /html-escaper/3.0.3:
+    dev: true
+    resolution:
+      integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==
   /html-tags/3.1.0:
     dev: true
     engines:
@@ -5012,12 +5087,28 @@ packages:
     dev: true
     resolution:
       integrity: sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
+  /linkedom/0.5.6:
+    dependencies:
+      '@ungap/event-target': 0.2.2
+      css-select: 3.1.2
+      html-escaper: 3.0.3
+      htmlparser2: 6.1.0
+      uhyphen: 0.1.0
+    dev: true
+    resolution:
+      integrity: sha512-6PLYvs7memANEiA7aqzI6hPfi0yRJwup8uwp8yviCyQLu1hdvdlkULYATA4G/y/kMEpgGPnIQ57mTL5/0TylZw==
   /linkify-it/2.2.0:
     dependencies:
       uc.micro: 1.0.6
     dev: true
     resolution:
       integrity: sha512-GnAl/knGn+i1U/wjBz3akz2stz+HrHLsxMwHQGofCDfPvlf+gDKN58UtfmUquTY4/MXeE2x7k19KQmeoZi94Iw==
+  /linkify-it/3.0.2:
+    dependencies:
+      uc.micro: 1.0.6
+    dev: false
+    resolution:
+      integrity: sha512-gDBO4aHNZS6coiZCKVhSNh43F9ioIL4JwRjLZPkoLIY4yZFwg264Y5lu2x6rb1Js42Gh6Yqm2f6L2AJcnkzinQ==
   /lint-staged/10.5.4:
     dependencies:
       chalk: 4.1.1
@@ -5121,6 +5212,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==
+  /lodash.castarray/4.4.0:
+    dev: true
+    resolution:
+      integrity: sha1-wCUTUV4wna3dTCTGDP3c9ZdtkRU=
   /lodash.clonedeep/4.5.0:
     dev: true
     resolution:
@@ -5137,6 +5232,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-+4m2WpqAKBgz8LdHizpRBPiY67M=
+  /lodash.isplainobject/4.0.6:
+    dev: true
+    resolution:
+      integrity: sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=
   /lodash.map/4.6.0:
     dev: true
     resolution:
@@ -5145,6 +5244,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
+  /lodash.merge/4.6.2:
+    dev: true
+    resolution:
+      integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
   /lodash.sortby/4.7.0:
     dev: false
     resolution:
@@ -5245,6 +5348,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
+  /markdown-it-anchor/7.1.0_markdown-it@12.0.6:
+    dependencies:
+      markdown-it: 12.0.6
+    dev: false
+    peerDependencies:
+      markdown-it: '*'
+    resolution:
+      integrity: sha512-loQggrwsIkkP7TOrESvmYkV2ikbQNNKhHcWyqC7/C2CmfHl1tkUizJJU8C5aGgg7J6oXVQJx17gk7i47tNn/lQ==
   /markdown-it/10.0.0:
     dependencies:
       argparse: 1.0.10
@@ -5256,6 +5367,17 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-YWOP1j7UbDNz+TumYP1kpwnP0aEa711cJjrAQrzd0UXlbJfc5aAq0F/PZHjiioqDC1NKgvIMX+o+9Bk7yuM2dg==
+  /markdown-it/12.0.6:
+    dependencies:
+      argparse: 2.0.1
+      entities: 2.1.0
+      linkify-it: 3.0.2
+      mdurl: 1.0.1
+      uc.micro: 1.0.6
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-qv3sVLl4lMT96LLtR7xeRJX11OUFjsaD5oVat2/SNBIb21bJXwal2+SklcRbTwGwqWpWH/HRtYavOoJE+seL8w==
   /maximatch/0.1.0:
     dependencies:
       array-differ: 1.0.0
@@ -5272,7 +5394,6 @@ packages:
     resolution:
       integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
   /mdurl/1.0.1:
-    dev: true
     resolution:
       integrity: sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=
   /memorystream/0.3.1:
@@ -6534,6 +6655,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-rbx5YLe7/iiaVX3F9zdhmiINBqU=
+  /prismjs/1.23.0:
+    dev: true
+    optionalDependencies:
+      clipboard: 2.0.8
+    resolution:
+      integrity: sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
   /progress/2.0.3:
     dev: true
     engines:
@@ -7113,6 +7240,11 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==
+  /select/1.1.2:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha1-DnNQrN7ICxEIUoeG7B1EGNEbOW0=
   /semver-compare/1.0.0:
     dev: true
     resolution:
@@ -7883,6 +8015,11 @@ packages:
     dev: true
     resolution:
       integrity: sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+  /tiny-emitter/2.1.0:
+    dev: true
+    optional: true
+    resolution:
+      integrity: sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
   /tmp/0.0.33:
     dependencies:
       os-tmpdir: 1.0.2
@@ -8041,7 +8178,6 @@ packages:
     resolution:
       integrity: sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
   /uc.micro/1.0.6:
-    dev: true
     resolution:
       integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==
   /uglify-js/3.13.5:
@@ -8052,6 +8188,10 @@ packages:
     optional: true
     resolution:
       integrity: sha512-xtB8yEqIkn7zmOyS2zUNBsYCBRhDkvlNxMMY2smuJ/qA8NCHeQvKCF3i9Z4k8FJH4+PJvZRtMrPynfZ75+CSZw==
+  /uhyphen/0.1.0:
+    dev: true
+    resolution:
+      integrity: sha512-o0QVGuFg24FK765Qdd5kk0zU/U4dEsCtN/GSiwNI9i8xsSVtjIAOdTaVhLwZ1nrbWxFVMxNDDl+9fednsOMsBw==
   /unbox-primitive/1.0.1:
     dependencies:
       function-bind: 1.1.1
@@ -8693,9 +8833,11 @@ specifiers:
   '@11ty/eleventy': 0.12.1
   '@11ty/eleventy-navigation': 0.2.0
   '@11ty/eleventy-plugin-rss': 1.1.1
+  '@11ty/eleventy-plugin-syntaxhighlight': ^3.1.0
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@fullhuman/postcss-purgecss': 4.0.3
+  '@tailwindcss/typography': ^0.4.0
   '@types/node': 15.0.1
   '@typescript-eslint/eslint-plugin': 4.22.0
   '@typescript-eslint/parser': 4.22.0
@@ -8706,6 +8848,7 @@ specifiers:
   cz-conventional-changelog: 3.3.0
   eleventy-google-fonts: 0.0.5
   eleventy-plugin-seo: 0.5.1
+  eleventy-plugin-time-to-read: ^1.0.0
   esbuild-loader: 2.12.0
   eslint: 7.25.0
   eslint-config-google: 0.14.0
@@ -8713,6 +8856,9 @@ specifiers:
   eslint-plugin-prettier: 3.4.0
   husky: 6.0.0
   lint-staged: 10.5.4
+  luxon: ^1.26.0
+  markdown-it: ^12.0.6
+  markdown-it-anchor: ^7.1.0
   mini-css-extract-plugin: 1.6.0
   npm-run-all: 4.1.5
   postcss: 8.2.13

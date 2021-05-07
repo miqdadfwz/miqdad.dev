@@ -5,11 +5,12 @@
     <nav role="navigation" aria-label="Main" class="flex align-items">
         <ul class="flex items-center spacing-x-4">
             {%- for item in collections.all | eleventyNavigation -%}
-            {%- set isCurrent = (item.url == page.url) -%}
-            {%- set isParent = item.url != '/' and item.url in page.url -%}
+            {%- set isCurrent = (item.url === page.url) -%}
+            {%- set isParent = item.url !== '/' and item.url in page.url -%}
             <li class="ml-4 hover:underline">
                 <a
-                    href="{% if isCurrent %}#content{% else %}{{ item.url | url }}{% endif %}"
+                    href="{% if isCurrent %}#{% else %}{{ item.url | url }}{% endif %}"
+                    {% if isCurrent %}class="font-semibold"{% endif %}
                     {% if isCurrent %}aria-current="page"{% endif %}
                 >
                     {{ item.title }}

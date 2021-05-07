@@ -1,0 +1,23 @@
+---
+layout: base
+---
+<h1 class="text-3xl font-serif">{{ title }}</h1>
+<div class="flex text-xs text-gray-400 mt-2 mb-4">
+    <time datetime="{{ date | htmlDateString }}">
+        {{ date | readableDate }}
+    </time>
+    <div class="mx-1">·</div>
+    <p>{{ content | timeToRead }} read</p>
+</div>
+<article class="font-serif prose max-w-full">
+    {{ content | safe }}
+</article>
+{%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+{%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+{%- if nextPost or previousPost %}
+<ul class="flex align-center justify-between my-8">
+  <li>{%- if previousPost %}<a href="{{ previousPost.url | url }}" class="underline">← {{ previousPost.data.title }}</a>{% endif %}</li>
+  <li>{%- if nextPost %}<a href="{{ nextPost.url | url }}" class="underline">{{ nextPost.data.title }}  →</a>{% endif %}</li>
+</ul>
+{%- endif %}
+<span class="block border border-dotted mb-16"></span>
