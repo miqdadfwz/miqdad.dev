@@ -13,7 +13,7 @@ const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 
 const isDev = process.env.NODE_ENV === 'development';
-const manifestPath = path.resolve(__dirname, 'dist', 'build.json');
+const manifestPath = path.resolve(__dirname, 'dist', 'assets', 'build.json');
 const manifest = isDev
   ? {
       'main.js': '/assets/index.js',
