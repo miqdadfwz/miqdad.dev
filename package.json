@@ -11,6 +11,7 @@
     "dev:assets": "cross-env NODE_ENV=development webpack --mode development --watch",
     "dev:site": "cross-env NODE_ENV=development eleventy --serve",
     "dev": "pnpm run clean && run-p dev:*",
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
