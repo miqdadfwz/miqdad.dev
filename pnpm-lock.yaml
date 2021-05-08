@@ -195,19 +195,6 @@ packages:
       '@babel/core': ^7.0.0
     resolution:
       integrity: sha512-3gmkYIrpqsLlieFwjkGgLaSHmhnvlAYzZLlYVjlW+QwI+1zE17kGxuJGmIqDQdYp56XdmGeD+Bswx0UTyG18xA==
-  /@babel/helper-create-class-features-plugin/7.13.11_@babel+core@7.14.0:
-    dependencies:
-      '@babel/core': 7.14.0_@babel+core@7.14.0
-      '@babel/helper-function-name': 7.12.13
-      '@babel/helper-member-expression-to-functions': 7.13.12
-      '@babel/helper-optimise-call-expression': 7.12.13
-      '@babel/helper-replace-supers': 7.13.12
-      '@babel/helper-split-export-declaration': 7.12.13
-    dev: false
-    peerDependencies:
-      '@babel/core': ^7.0.0
-    resolution:
-      integrity: sha512-ays0I7XYq9xbjCSvT+EvysLgfc3tOkwCULHjrnscGT3A9qD4sk3wXnJ3of0MAWsWGjdinFvajHU2smYuqXKMrw==
   /@babel/helper-create-class-features-plugin/7.14.0_@babel+core@7.14.0:
     dependencies:
       '@babel/core': 7.14.0_@babel+core@7.14.0
@@ -345,10 +332,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tCJDltF83htUtXx5NLcaDqRmknv652ZWCHyoTETf1CXYJdPC7nohZohjUgieXhv0hTJdRf2FjDueFehdNucpzg==
-  /@babel/helper-validator-identifier/7.12.11:
-    dev: false
-    resolution:
-      integrity: sha512-np/lG3uARFybkoHokJUmf1QfEvRVCPbmQeUQpKow5cQ3xWrV9i3rUHodKDJPQfTVX61qKi+UdYk8kik84n7XOw==
   /@babel/helper-validator-identifier/7.14.0:
     resolution:
       integrity: sha512-V3ts7zMSu5lfiwWDVWzRDGIN+lnCEUdaXgtVHJgLb1rGaA6jMrtB9EmE7L18foXJIE8Un/A/h6NJfGQp/e1J4A==
@@ -411,7 +394,7 @@ packages:
   /@babel/plugin-proposal-class-properties/7.13.0_@babel+core@7.14.0:
     dependencies:
       '@babel/core': 7.14.0_@babel+core@7.14.0
-      '@babel/helper-create-class-features-plugin': 7.13.11_@babel+core@7.14.0
+      '@babel/helper-create-class-features-plugin': 7.14.0_@babel+core@7.14.0
       '@babel/helper-plugin-utils': 7.13.0
     dev: false
     peerDependencies:
@@ -525,7 +508,7 @@ packages:
   /@babel/plugin-proposal-private-methods/7.13.0_@babel+core@7.14.0:
     dependencies:
       '@babel/core': 7.14.0_@babel+core@7.14.0
-      '@babel/helper-create-class-features-plugin': 7.13.11_@babel+core@7.14.0
+      '@babel/helper-create-class-features-plugin': 7.14.0_@babel+core@7.14.0
       '@babel/helper-plugin-utils': 7.13.0
     dev: false
     peerDependencies:
@@ -848,7 +831,7 @@ packages:
       '@babel/helper-hoist-variables': 7.13.16
       '@babel/helper-module-transforms': 7.14.0
       '@babel/helper-plugin-utils': 7.13.0
-      '@babel/helper-validator-identifier': 7.12.11
+      '@babel/helper-validator-identifier': 7.14.0
       babel-plugin-dynamic-import-node: 2.3.3
     dev: false
     peerDependencies:
@@ -8841,11 +8824,11 @@ specifiers:
   '@11ty/eleventy': 0.12.1
   '@11ty/eleventy-navigation': 0.2.0
   '@11ty/eleventy-plugin-rss': 1.1.1
-  '@11ty/eleventy-plugin-syntaxhighlight': ^3.1.0
+  '@11ty/eleventy-plugin-syntaxhighlight': 3.1.0
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@fullhuman/postcss-purgecss': 4.0.3
-  '@tailwindcss/typography': ^0.4.0
+  '@tailwindcss/typography': 0.4.0
   '@types/node': 15.0.1
   '@typescript-eslint/eslint-plugin': 4.22.0
   '@typescript-eslint/parser': 4.22.0
@@ -8856,7 +8839,7 @@ specifiers:
   cz-conventional-changelog: 3.3.0
   eleventy-google-fonts: 0.0.5
   eleventy-plugin-seo: 0.5.1
-  eleventy-plugin-time-to-read: ^1.0.0
+  eleventy-plugin-time-to-read: 1.0.0
   esbuild-loader: 2.12.0
   eslint: 7.25.0
   eslint-config-google: 0.14.0
@@ -8864,9 +8847,9 @@ specifiers:
   eslint-plugin-prettier: 3.4.0
   husky: 6.0.0
   lint-staged: 10.5.4
-  luxon: ^1.26.0
-  markdown-it: ^12.0.6
-  markdown-it-anchor: ^7.1.0
+  luxon: 1.26.0
+  markdown-it: 12.0.6
+  markdown-it-anchor: 7.1.0
   mini-css-extract-plugin: 1.6.0
   npm-run-all: 4.1.5
   postcss: 8.2.13
@@ -8878,10 +8861,10 @@ specifiers:
   webpack-cli: 4.6.0
   webpack-manifest-plugin: 3.1.1
   webpackbar: 5.0.0-3
-  workbox-cacheable-response: ^6.1.5
-  workbox-expiration: ^6.1.5
-  workbox-navigation-preload: ^6.1.5
-  workbox-precaching: ^6.1.5
-  workbox-routing: ^6.1.5
-  workbox-strategies: ^6.1.5
-  workbox-webpack-plugin: ^6.1.5
+  workbox-cacheable-response: 6.1.5
+  workbox-expiration: 6.1.5
+  workbox-navigation-preload: 6.1.5
+  workbox-precaching: 6.1.5
+  workbox-routing: 6.1.5
+  workbox-strategies: 6.1.5
+  workbox-webpack-plugin: 6.1.5
