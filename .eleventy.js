@@ -26,12 +26,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginGoogleFonts);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
-
-  eleventyConfig.addPlugin(pluginSEO, require('./src/data/seo.json'), {
-    titleStyle: 'minimalistic',
-    titleDivider: '|',
-    imageWithBaseUrl: true,
-  });
+  eleventyConfig.addPlugin(pluginSEO, require('./src/data/seo.json'));
 
   eleventyConfig.addLayoutAlias('base', 'base.njk');
   eleventyConfig.addLayoutAlias('post', 'post.njk');
@@ -52,7 +47,15 @@ module.exports = (eleventyConfig) => {
     return manifest['main.js'] ? `<link rel="preload" href="${manifest['main.js']}" as="script"></link>` : '';
   });
 
-  eleventyConfig.addPassthroughCopy({ 'src/static': '/static', 'src/manifest.json': '', 'src/robots.txt': '' });
+  eleventyConfig.addShortcode('version', function () {
+    try {
+      return require('./package.json').version || '0.0.1';
+    } catch {
+      return '0.0.1';
+    }
+  });
+
+  eleventyConfig.addPassthroughCopy({ 'src/static': '/static', 'src/manifest.json': '' });
 
   eleventyConfig.setBrowserSyncConfig({
     files: [manifestPath],

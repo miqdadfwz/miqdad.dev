@@ -1,8 +1,12 @@
 {
   "title": "miqdad.dev",
-  "description": "Personal website of Miqdad A. Fawwaz",
+  "description": "Personal website of Miqdad A. Fawwaz. Thoughts on web platform and software engineering",
   "url": "https://miqdad.dev",
   "author": "Miqdad Abdurrahman Fawwaz",
   "twitter": "miqdadfwz",
-  "image": "/static/m-icon-bg.png"
+  "image": "/static/m-icon-bg.png",
+  "options": {
+    "titleStyle": "minimalistic",
+    "titleDivider": "|"
+  }
 }

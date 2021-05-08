@@ -10,10 +10,10 @@
 
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="application-name" content="Fugu Tracker" />
-    <meta name="apple-mobile-web-app-title" content="Fugu Tracker" />
-    <meta name="theme-color" content="#f9f9f9" />
-    <meta name="msapplication-navbutton-color" content="#f9f9f9" />
+    <meta name="application-name" content="miqdad.dev" />
+    <meta name="apple-mobile-web-app-title" content="miqdad.dev" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#ffffff" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="msapplication-starturl" content="/" />
 
@@ -33,8 +33,8 @@
     {% bundledCSS %}
     {% seo "" %}
 </head>
-<body>
-    <div class="flex flex-col min-h-screen max-w-3xl mx-auto pt-6 px-6 lg:pt-12 lg:px-12">
+<body class="transition-colors duration-500 dark:bg-gray-800">
+    <div class="flex flex-col min-h-screen max-w-3xl mx-auto pt-6 px-6">
         {% include "header.njk" %}
         <main>
             {{ content | safe }}

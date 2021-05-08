@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'jit',
-  darkMode: false,
+  darkMode: 'media',
   purge: ['./src/**/*.html', './src/**/*.md', './src/**/*.js', './src/**/*.njk'],
   theme: {
     fontFamily: {

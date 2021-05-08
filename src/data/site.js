@@ -1,6 +1,6 @@
 module.exports = {
   title: 'miqdad.dev',
-  description: 'Personal website of Miqdad A. Fawwaz',
+  description: 'Personal website of Miqdad A. Fawwaz. Thoughts on web platform and software engineering',
   url: 'http://miqdad.dev',
   twitter: 'https://twitter.com/miqdadfwz',
   github: 'https://github.com/miqdadfwz',
