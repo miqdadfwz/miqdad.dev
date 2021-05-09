@@ -5,7 +5,7 @@
 
 <!-- prettier-ignore-start -->
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ce5337d4-e064-45bb-981e-b8266063da40/deploy-status)](https://app.netlify.com/sites/miqdaddev/deploys)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/miqdadfwz/miqdad.dev/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/miqdadfwz/miqdad.dev/graphs/commit-activity)\
 [![Lighthouse Accessibility Badge](./src/static/lighthouse/lighthouse_accessibility.svg)](https://github.com/emazzotta/lighthouse-badges)
 [![Lighthouse Best Practices Badge](./src/static/lighthouse/lighthouse_best-practices.svg)](https://github.com/emazzotta/lighthouse-badges)
 [![Lighthouse Performance Badge](./src/static/lighthouse/lighthouse_performance.svg)](https://github.com/emazzotta/lighthouse-badges)
