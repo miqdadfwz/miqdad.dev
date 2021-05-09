@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-a#dark-important {
+a.dark-important {
   @apply dark:text-blue-400 !important;
 }
 
