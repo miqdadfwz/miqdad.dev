@@ -70,7 +70,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 - [11ty](https://www.11ty.dev/) — Simple and robust static stite generator.
 - [Workbox](https://developers.google.com/web/tools/workbox) — Workbox is a library that bakes in a set of best practices and removes the boilerplate every developer writes when working with service workers.
 - [Netlify](https://www.netlify.com/) — CI/CD, deployment and scaled hosting a commodity and helps creating great dynamic user experiences in a Jamstack world.
-
+- [Webpack](https://webpack.js.org/) —  Static module bundler for modern JavaScript applications.
 ### Pull Request Process
 
 1. Ensure any install or build dependencies are removed before the end of the layer when doing a
