@@ -1,7 +1,4 @@
 [[redirects]]
     from = "/*"
-    to = "/"
+    to = "https://miqdad.dev"
     status = 301
-
-[build.environment]
-    NPM_FLAGS="--prefix=/"
