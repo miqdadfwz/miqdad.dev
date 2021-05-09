@@ -17,6 +17,15 @@
                 </a>
             </li>
             {%- endfor -%}
+            <li class="ml-4 hover:underline">
+                <a
+                    href="/rss.xml"
+                    {% if isCurrent %}class="font-semibold"{% endif %}
+                    {% if isCurrent %}aria-current="page"{% endif %}
+                >
+                    RSS
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
