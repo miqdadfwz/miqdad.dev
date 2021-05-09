@@ -8,7 +8,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/miqdadfwz/miqdad.dev/graphs/commit-activity)
 <!-- prettier-ignore-end -->
 
-> Website which provide my personal resume to get to know me further.
+> Personal website of Miqdad A. Fawwaz. Thoughts on web platform and software engineering.
 
 ## Contributing
 
