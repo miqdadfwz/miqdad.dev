@@ -3,5 +3,5 @@
 
 [[redirects]]
     from = "/*"
-    to = "https://miqdad.dev/"
+    to = "https://miqdad.dev"
     status = 301
