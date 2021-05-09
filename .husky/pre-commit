@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
-
-pnpm run pre-commit
+npx lighthouse-badges --urls https://miqdad.dev -o ./src/static/lighthouse
+git add . && pnpm run pre-commit
