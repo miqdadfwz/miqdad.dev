@@ -4,9 +4,8 @@
 </div>
 
 <!-- prettier-ignore-start -->
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/miqdadfwz/miqdad.dev/graphs/commit-activity)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ce5337d4-e064-45bb-981e-b8266063da40/deploy-status)](https://app.netlify.com/sites/miqdaddev/deploys)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/miqdadfwz/miqdad.dev/graphs/commit-activity)
 <!-- prettier-ignore-end -->
 
 > Website which provide my personal resume to get to know me further.
@@ -17,6 +16,99 @@ When contributing to this repository, please first discuss the change you wish t
 email, or any other method with the owners of this repository before making a change.
 
 Please note we have a code of conduct, please follow it in all your interactions with the project.
+
+### Folder Structure
+```
+.
+├── LICENSE
+├── README.md
+├── commitlint.config.js
+├── netlify.toml
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── renovate.json
+├── src
+│   ├── assets
+│   │   ├── scripts
+│   │   │   └── index.ts
+│   │   └── styles
+│   │       └── index.css
+│   ├── data
+│   │   ├── seo.json
+│   │   └── site.js
+│   ├── feed.njk
+│   ├── includes
+│   │   ├── footer.njk
+│   │   ├── header.njk
+│   │   ├── posts.njk
+│   │   └── profile.njk
+│   ├── index.njk
+│   ├── layouts
+│   │   ├── base.njk
+│   │   └── post.njk
+│   ├── manifest.json
+│   ├── offline.njk
+│   ├── posts
+│   │   └── posts.json
+│   ├── static
+│   │   ├── disconnected.svg
+│   │   ├── favicon
+│   │   │   ├── android-icon-144x144.png
+│   │   │   ├── android-icon-192x192.png
+│   │   │   ├── android-icon-36x36.png
+│   │   │   ├── android-icon-48x48.png
+│   │   │   ├── android-icon-72x72.png
+│   │   │   ├── android-icon-96x96.png
+│   │   │   ├── apple-icon-114x114.png
+│   │   │   ├── apple-icon-120x120.png
+│   │   │   ├── apple-icon-144x144.png
+│   │   │   ├── apple-icon-152x152.png
+│   │   │   ├── apple-icon-180x180.png
+│   │   │   ├── apple-icon-57x57.png
+│   │   │   ├── apple-icon-60x60.png
+│   │   │   ├── apple-icon-72x72.png
+│   │   │   ├── apple-icon-76x76.png
+│   │   │   ├── apple-icon-precomposed.png
+│   │   │   ├── apple-icon.png
+│   │   │   ├── favicon-16x16.png
+│   │   │   ├── favicon-32x32.png
+│   │   │   ├── favicon-96x96.png
+│   │   │   ├── favicon.ico
+│   │   │   ├── ms-icon-144x144.png
+│   │   │   ├── ms-icon-150x150.png
+│   │   │   ├── ms-icon-310x310.png
+│   │   │   └── ms-icon-70x70.png
+│   │   └── pwa
+│   │       ├── m-icon-128.png
+│   │       ├── m-icon-192.png
+│   │       ├── m-icon-384.png
+│   │       ├── m-icon-48.png
+│   │       ├── m-icon-512.png
+│   │       ├── m-icon-72.png
+│   │       ├── m-icon-96.png
+│   │       ├── m-icon-reg-128.png
+│   │       ├── m-icon-reg-192.png
+│   │       ├── m-icon-reg-384.png
+│   │       ├── m-icon-reg-48.png
+│   │       ├── m-icon-reg-512.png
+│   │       ├── m-icon-reg-72.png
+│   │       └── m-icon-reg-96.png
+│   └── sw.ts
+├── ssl
+│   ├── localhost+2-key.pem
+│   └── localhost+2.pem
+├── tailwind.config.js
+├── tsconfig.json
+└── webpack.config.js
+```
+
+### Stacks
+- [Tailwind](https://tailwindcss.com) — Utility CSS framework.
+- [TypeScript](https://www.typescriptlang.org/) — open-source language which builds on JavaScript, one of the world’s most used tools, by adding static type definitions.
+- [11ty](https://www.11ty.dev/) — Simple and robust static stite generator.
+- [Workbox](https://developers.google.com/web/tools/workbox) — Workbox is a library that bakes in a set of best practices and removes the boilerplate every developer writes when working with service workers.
+- [Netlify](https://www.netlify.com/) — CI/CD, deployment and scaled hosting a commodity and helps creating great dynamic user experiences in a Jamstack world.
 
 ### Pull Request Process
 
@@ -43,9 +135,6 @@ include:
 - Showing empathy towards other community members
 
 Examples of unacceptable behavior by participants include:
-
-- The use of sexualized language or imagery and unwelcome sexual attention or
-  advances
 - Trolling, insulting/derogatory comments, and personal or political attacks
 - Public or private harassment
 - Publishing others' private information, such as a physical or electronic
