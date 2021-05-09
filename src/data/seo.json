@@ -4,7 +4,7 @@
   "url": "https://miqdad.dev",
   "author": "Miqdad Abdurrahman Fawwaz",
   "twitter": "miqdadfwz",
-  "image": "/static/m-icon-bg.png",
+  "image": "/static/favicon/favicon.ico",
   "options": {
     "titleStyle": "minimalistic",
     "titleDivider": "|"
