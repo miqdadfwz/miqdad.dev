@@ -1,2 +1,7 @@
 [build.environment]
     NPM_FLAGS="--prefix=/"
+
+[[redirects]]
+    from = "/*"
+    to = "/"
+    status = 301
