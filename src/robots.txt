@@ -1,0 +1,3 @@
+Sitemap: https://www.miqdad.dev/sitemap.xml
+User-agent: *
+Disallow:

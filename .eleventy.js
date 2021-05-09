@@ -55,7 +55,7 @@ module.exports = (eleventyConfig) => {
     }
   });
 
-  eleventyConfig.addPassthroughCopy({ 'src/static': '/static', 'src/manifest.json': '' });
+  eleventyConfig.addPassthroughCopy({ 'src/static': '/static', 'src/manifest.json': '', 'src/robots.txt': '' });
 
   eleventyConfig.setBrowserSyncConfig({
     files: [manifestPath],
