@@ -3,7 +3,7 @@
 
 CHANGED=$(git status ./src --porcelain --untracked-files=no)
 
-if [ -n "${CHANGED}"]; then
+if [ -n "${CHANGED}" ]; then
     pnpm run pre-commit
 else
     npx lighthouse-badges --urls https://miqdad.dev -o ./src/static/lighthouse  
