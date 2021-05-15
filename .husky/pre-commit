@@ -1,4 +1,11 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
-npx lighthouse-badges --urls https://miqdad.dev -o ./src/static/lighthouse
-git add . && pnpm run pre-commit
+
+CHANGED=$(git status ./src --porcelain --untracked-files=no)
+
+if [ -n "${CHANGED}"]; then
+    pnpm run pre-commit
+else
+    npx lighthouse-badges --urls https://miqdad.dev -o ./src/static/lighthouse  
+    git add . && pnpm run pre-commit
+fi
