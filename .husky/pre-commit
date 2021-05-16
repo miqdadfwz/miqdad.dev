@@ -1,11 +1,12 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-CHANGED=$(git status ./src --porcelain --untracked-files=no)
+WORK_TREE="${PWD}/src"
+CHANGED=$(git status ./src --porcelain | wc -l)
 
-if [ -n "${CHANGED}" ]; then
-    pnpm run pre-commit
-else
+if [ "$CHANGED" -ne 0 ]; then
     npx lighthouse-badges --urls https://miqdad.dev -o ./src/static/lighthouse  
     git add . && pnpm run pre-commit
+else
+    pnpm run pre-commit
 fi
