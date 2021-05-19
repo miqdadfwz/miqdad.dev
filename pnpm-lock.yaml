@@ -9,7 +9,7 @@ specifiers:
   '@commitlint/config-conventional': 11.0.0
   '@fullhuman/postcss-purgecss': 4.0.3
   '@tailwindcss/typography': 0.4.0
-  '@types/node': 15.0.1
+  '@types/node': 15.3.1
   '@typescript-eslint/eslint-plugin': 4.22.0
   '@typescript-eslint/parser': 4.22.0
   autoprefixer: 10.2.5
@@ -81,7 +81,7 @@ devDependencies:
   '@commitlint/cli': 11.0.0
   '@commitlint/config-conventional': 11.0.0
   '@tailwindcss/typography': 0.4.0_tailwindcss@2.1.2
-  '@types/node': 15.0.1
+  '@types/node': 15.3.1
   '@typescript-eslint/eslint-plugin': 4.22.0_e3b52a83531895e7febd6ecd5ba813eb
   '@typescript-eslint/parser': 4.22.0_eslint@7.25.0+typescript@4.2.4
   cz-conventional-changelog: 3.3.0
@@ -1546,6 +1546,11 @@ packages:
 
   /@types/node/15.0.1:
     resolution: {integrity: sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==}
+    dev: false
+
+  /@types/node/15.3.1:
+    resolution: {integrity: sha512-weaeiP4UF4XgF++3rpQhpIJWsCTS4QJw5gvBhQu6cFIxTwyxWIe3xbnrY/o2lTCQ0lsdb8YIUDUvLR4Vuz5rbw==}
+    dev: true
 
   /@types/normalize-package-data/2.4.0:
     resolution: {integrity: sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==}
