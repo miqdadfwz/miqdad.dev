@@ -20,7 +20,7 @@ specifiers:
   eleventy-google-fonts: 0.0.5
   eleventy-plugin-seo: 0.5.1
   eleventy-plugin-time-to-read: 1.0.0
-  esbuild-loader: 2.13.0
+  esbuild-loader: 2.13.1
   eslint: 7.25.0
   eslint-config-google: 0.14.0
   eslint-config-prettier: 8.3.0
@@ -55,7 +55,7 @@ dependencies:
   cross-env: 7.0.3
   css-loader: 5.2.4_webpack@5.37.0
   cssnano: 5.0.2_postcss@8.3.0
-  esbuild-loader: 2.13.0_webpack@5.37.0
+  esbuild-loader: 2.13.1_webpack@5.37.0
   markdown-it: 12.0.6
   markdown-it-anchor: 7.1.0_markdown-it@12.0.6
   mini-css-extract-plugin: 1.6.0_webpack@5.37.0
@@ -3402,8 +3402,8 @@ packages:
       is-symbol: 1.0.3
     dev: true
 
-  /esbuild-loader/2.13.0_webpack@5.37.0:
-    resolution: {integrity: sha512-gC9lML8RGkTSWG2pJVEOZRLMoIluq1Jd7OzzVkOZKMzbMDMWDhXEwXLs60n+aglnAYa9GVrD/UXjTHkM51nBsg==}
+  /esbuild-loader/2.13.1_webpack@5.37.0:
+    resolution: {integrity: sha512-Tzc5nB5tVUmigXz6m4j1OYozJCjdix7E9vtd5RaE54fqz2Rz34Is9S8FbAf8uqR4xvQUBAXIi6Jkn1OeMxw2aQ==}
     peerDependencies:
       webpack: ^4.40.0 || ^5.0.0
     dependencies:
@@ -3411,6 +3411,7 @@ packages:
       joycon: 3.0.1
       json5: 2.2.0
       loader-utils: 2.0.0
+      tapable: 2.2.0
       type-fest: 1.0.2
       webpack: 5.37.0_webpack-cli@4.7.0
       webpack-sources: 2.2.0

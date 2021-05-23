@@ -75,7 +75,7 @@
     "cross-env": "7.0.3",
     "css-loader": "5.2.4",
     "cssnano": "5.0.2",
-    "esbuild-loader": "2.13.0",
+    "esbuild-loader": "2.13.1",
     "markdown-it": "12.0.6",
     "markdown-it-anchor": "7.1.0",
     "mini-css-extract-plugin": "1.6.0",
