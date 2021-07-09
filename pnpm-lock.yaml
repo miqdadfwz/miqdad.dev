@@ -27,7 +27,7 @@ specifiers:
   eslint-plugin-prettier: 3.4.0
   husky: 6.0.0
   lint-staged: 11.0.0
-  luxon: 1.26.0
+  luxon: 1.28.0
   markdown-it: 12.0.6
   markdown-it-anchor: 7.1.0
   mini-css-extract-plugin: 1.6.0
@@ -94,7 +94,7 @@ devDependencies:
   eslint-plugin-prettier: 3.4.0_beb8ddd1fba5378f74976112c7860a07
   husky: 6.0.0
   lint-staged: 11.0.0
-  luxon: 1.26.0
+  luxon: 1.28.0
   npm-run-all: 4.1.5
   prettier: 2.3.0
   tailwindcss: 2.1.2_bce0498cf0c3ab962ab667a3a4ae1b48
@@ -5077,6 +5077,10 @@ packages:
 
   /luxon/1.26.0:
     resolution: {integrity: sha512-+V5QIQ5f6CDXQpWNICELwjwuHdqeJM1UenlZWx5ujcRMc9venvluCjFb4t5NYLhb6IhkbMVOxzVuOqkgMxee2A==}
+    dev: true
+
+  /luxon/1.28.0:
+    resolution: {integrity: sha512-TfTiyvZhwBYM/7QdAVDh+7dBTBA29v4ik0Ce9zda3Mnf8on1S5KJI8P2jKFZ8+5C0jhmr0KwJEO/Wdpm0VeWJQ==}
     dev: true
 
   /magic-string/0.25.7:
