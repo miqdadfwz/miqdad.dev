@@ -25,7 +25,7 @@ specifiers:
   eslint-config-google: 0.14.0
   eslint-config-prettier: 8.3.0
   eslint-plugin-prettier: 3.4.0
-  husky: 6.0.0
+  husky: 7.0.1
   lint-staged: 11.0.0
   luxon: 1.28.0
   markdown-it: 12.0.6
@@ -92,7 +92,7 @@ devDependencies:
   eslint-config-google: 0.14.0_eslint@7.27.0
   eslint-config-prettier: 8.3.0_eslint@7.27.0
   eslint-plugin-prettier: 3.4.0_beb8ddd1fba5378f74976112c7860a07
-  husky: 6.0.0
+  husky: 7.0.1
   lint-staged: 11.0.0
   luxon: 1.28.0
   npm-run-all: 4.1.5
@@ -4308,8 +4308,9 @@ packages:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
 
-  /husky/6.0.0:
-    resolution: {integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==}
+  /husky/7.0.1:
+    resolution: {integrity: sha512-gceRaITVZ+cJH9sNHqx5tFwbzlLCVxtVZcusME8JYQ8Edy5mpGDOqD8QBCdMhpyo9a+JXddnujQ4rpY2Ff9SJA==}
+    engines: {node: '>=12'}
     hasBin: true
     dev: true
 
