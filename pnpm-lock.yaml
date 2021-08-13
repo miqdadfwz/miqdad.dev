@@ -12,7 +12,7 @@ specifiers:
   '@types/node': 15.0.1
   '@typescript-eslint/eslint-plugin': 4.29.1
   '@typescript-eslint/parser': 4.29.1
-  autoprefixer: 10.2.5
+  autoprefixer: 10.3.1
   cross-env: 7.0.3
   css-loader: 5.2.6
   cssnano: 5.0.7
@@ -51,7 +51,7 @@ specifiers:
 
 dependencies:
   '@fullhuman/postcss-purgecss': 4.0.3_postcss@8.3.6
-  autoprefixer: 10.2.5_postcss@8.3.6
+  autoprefixer: 10.3.1_postcss@8.3.6
   cross-env: 7.0.3
   css-loader: 5.2.6_webpack@5.50.0
   cssnano: 5.0.7_postcss@8.3.6
@@ -97,7 +97,7 @@ devDependencies:
   luxon: 1.28.0
   npm-run-all: 4.1.5
   prettier: 2.3.2
-  tailwindcss: 2.2.7_47b63e9b1d2c8189c4975612c1a3f0fa
+  tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
   typescript: 4.3.5
 
 packages:
@@ -1512,7 +1512,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.7_47b63e9b1d2c8189c4975612c1a3f0fa
+      tailwindcss: 2.2.7_7b69a43ec4689fa7484dee35f79a7806
     dev: true
 
   /@trysound/sax/0.1.1:
@@ -2118,17 +2118,17 @@ packages:
     hasBin: true
     dev: true
 
-  /autoprefixer/10.2.5_postcss@8.3.6:
-    resolution: {integrity: sha512-7H4AJZXvSsn62SqZyJCP+1AWwOuoYpUfK6ot9vm0e87XD6mT8lDywc9D9OTJPMULyGcvmIxzTAMeG2Cc+YX+fA==}
+  /autoprefixer/10.3.1_postcss@8.3.6:
+    resolution: {integrity: sha512-L8AmtKzdiRyYg7BUXJTzigmhbQRCXFKz6SA1Lqo0+AR2FBbQ4aTAPFSDlOutnFkjhiz8my4agGXog1xlMjPJ6A==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.16.5
-      caniuse-lite: 1.0.30001218
+      browserslist: 4.16.7
+      caniuse-lite: 1.0.30001251
       colorette: 1.2.2
-      fraction.js: 4.0.13
+      fraction.js: 4.1.1
       normalize-range: 0.1.2
       postcss: 8.3.6
       postcss-value-parser: 4.1.0
@@ -3911,8 +3911,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /fraction.js/4.0.13:
-    resolution: {integrity: sha512-E1fz2Xs9ltlUp+qbiyx9wmt2n9dRzPsS11Jtdb8D2o+cC7wr9xkkKsVKJuBX0ST+LVS+LhLO+SbLJNtfWcJvXA==}
+  /fraction.js/4.1.1:
+    resolution: {integrity: sha512-MHOhvvxHTfRFpF1geTK9czMIZ6xclsEor2wkIGYYq+PxcQqT7vStJqjhe6S1TenZrMZzo+wlqOufBDVepUEgPg==}
     dev: false
 
   /fragment-cache/0.2.1:
@@ -7546,7 +7546,7 @@ packages:
       strip-ansi: 6.0.0
     dev: true
 
-  /tailwindcss/2.2.7_47b63e9b1d2c8189c4975612c1a3f0fa:
+  /tailwindcss/2.2.7_7b69a43ec4689fa7484dee35f79a7806:
     resolution: {integrity: sha512-jv35rugP5j8PpzbXnsria7ZAry7Evh0KtQ4MZqNd+PhF+oIKPwJTVwe/rmfRx9cZw3W7iPZyzBmeoAoNwfJ1yg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
@@ -7555,7 +7555,7 @@ packages:
       postcss: ^8.0.9
     dependencies:
       arg: 5.0.0
-      autoprefixer: 10.2.5_postcss@8.3.6
+      autoprefixer: 10.3.1_postcss@8.3.6
       bytes: 3.1.0
       chalk: 4.1.1
       chokidar: 3.5.2
