@@ -50,7 +50,7 @@
     "@typescript-eslint/parser": "4.29.1",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-google-fonts": "0.0.5",
-    "eleventy-plugin-seo": "0.5.1",
+    "eleventy-plugin-seo": "0.5.2",
     "eleventy-plugin-time-to-read": "1.0.0",
     "eslint": "7.27.0",
     "eslint-config-google": "0.14.0",
