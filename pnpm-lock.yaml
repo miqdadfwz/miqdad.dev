@@ -19,7 +19,7 @@ specifiers:
   cz-conventional-changelog: 3.3.0
   eleventy-google-fonts: 0.0.5
   eleventy-plugin-seo: 0.5.2
-  eleventy-plugin-time-to-read: 1.0.0
+  eleventy-plugin-time-to-read: 1.1.0
   esbuild-loader: 2.13.1
   eslint: 7.32.0
   eslint-config-google: 0.14.0
@@ -87,7 +87,7 @@ devDependencies:
   cz-conventional-changelog: 3.3.0
   eleventy-google-fonts: 0.0.5
   eleventy-plugin-seo: 0.5.2
-  eleventy-plugin-time-to-read: 1.0.0_@11ty+eleventy@0.12.1
+  eleventy-plugin-time-to-read: 1.1.0_@11ty+eleventy@0.12.1
   eslint: 7.32.0
   eslint-config-google: 0.14.0_eslint@7.32.0
   eslint-config-prettier: 8.3.0_eslint@7.32.0
@@ -3314,11 +3314,14 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /eleventy-plugin-time-to-read/1.0.0_@11ty+eleventy@0.12.1:
-    resolution: {integrity: sha512-UvgwuyW0xCwAwwjDaoiCSCdjHqsnCidLSykvn5EkmKVFDkcFfzJTrVhJgQW3ZyMTuFqaOX+prl6N2NSIgdYPGg==}
+  /eleventy-plugin-time-to-read/1.1.0_@11ty+eleventy@0.12.1:
+    resolution: {integrity: sha512-7z5Yp+/fAnN6gWKl999Kz/pc80beHeh9YUEneOa4wjTZ44NKWq2fcl12TIDpVYmGBSFvdW0w8XtV0BjwhOyr/w==}
     engines: {node: '>=13.0.0'}
     peerDependencies:
-      '@11ty/eleventy': ^0.11.0
+      '@11ty/eleventy': 0.11 - 0.x
+    peerDependenciesMeta:
+      '@11ty/eleventy':
+        optional: true
     dependencies:
       '@11ty/eleventy': 0.12.1
     dev: true
