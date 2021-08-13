@@ -34,7 +34,7 @@ specifiers:
   npm-run-all: 4.1.5
   postcss: 8.3.6
   postcss-loader: 5.3.0
-  prettier: 2.3.0
+  prettier: 2.3.2
   tailwindcss: 2.2.7
   typescript: 4.3.5
   webpack: 5.50.0
@@ -91,12 +91,12 @@ devDependencies:
   eslint: 7.32.0
   eslint-config-google: 0.14.0_eslint@7.32.0
   eslint-config-prettier: 8.3.0_eslint@7.32.0
-  eslint-plugin-prettier: 3.4.0_39707b7de4180b40645e0fe3095cfe49
+  eslint-plugin-prettier: 3.4.0_5a48a349ffec60f5257b5f148f5199c3
   husky: 7.0.1
   lint-staged: 11.0.0
   luxon: 1.28.0
   npm-run-all: 4.1.5
-  prettier: 2.3.0
+  prettier: 2.3.2
   tailwindcss: 2.2.7_47b63e9b1d2c8189c4975612c1a3f0fa
   typescript: 4.3.5
 
@@ -3519,7 +3519,7 @@ packages:
       eslint: 7.32.0
     dev: true
 
-  /eslint-plugin-prettier/3.4.0_39707b7de4180b40645e0fe3095cfe49:
+  /eslint-plugin-prettier/3.4.0_5a48a349ffec60f5257b5f148f5199c3:
     resolution: {integrity: sha512-UDK6rJT6INSfcOo545jiaOwB701uAIt2/dR7WnFQoGCVl1/EMqdANBmwUaqqQ45aXprsTGzSa39LI1PyuRBxxw==}
     engines: {node: '>=6.0.0'}
     peerDependencies:
@@ -3532,7 +3532,7 @@ packages:
     dependencies:
       eslint: 7.32.0
       eslint-config-prettier: 8.3.0_eslint@7.32.0
-      prettier: 2.3.0
+      prettier: 2.3.2
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -6359,8 +6359,8 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier/2.3.0:
-    resolution: {integrity: sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==}
+  /prettier/2.3.2:
+    resolution: {integrity: sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
