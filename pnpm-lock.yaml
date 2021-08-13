@@ -18,7 +18,7 @@ specifiers:
   cssnano: 5.0.2
   cz-conventional-changelog: 3.3.0
   eleventy-google-fonts: 0.0.5
-  eleventy-plugin-seo: 0.5.1
+  eleventy-plugin-seo: 0.5.2
   eleventy-plugin-time-to-read: 1.0.0
   esbuild-loader: 2.13.1
   eslint: 7.27.0
@@ -86,7 +86,7 @@ devDependencies:
   '@typescript-eslint/parser': 4.29.1_eslint@7.27.0+typescript@4.2.4
   cz-conventional-changelog: 3.3.0
   eleventy-google-fonts: 0.0.5
-  eleventy-plugin-seo: 0.5.1
+  eleventy-plugin-seo: 0.5.2
   eleventy-plugin-time-to-read: 1.0.0_@11ty+eleventy@0.12.1
   eslint: 7.27.0
   eslint-config-google: 0.14.0_eslint@7.27.0
@@ -3273,8 +3273,8 @@ packages:
     resolution: {integrity: sha512-zeAtLoLkV3BTYcfLc74K/5eDv3IgKmiTO1+tnktlqgx5DQzyxjvrXVjCDaJpZUv0p6a1gxwpwSyqxCodJ7/uMQ==}
     dev: true
 
-  /eleventy-plugin-seo/0.5.1:
-    resolution: {integrity: sha512-rNzVeGGsUWBOW74JaP/7po5EbYttF8+fMMXwYzhkV6gYFXOwouVnadrHoyTcHJLwh9kJXx5WAOPIBSyghYmXPA==}
+  /eleventy-plugin-seo/0.5.2:
+    resolution: {integrity: sha512-saAWnrQrMc/dP6nimCbvAlumohfBrDI7IrpkN/OJoxvLxcOsyWrA+XMR+3lWLVAkuwC1SyA5cbunr1u8jkFK/A==}
     dependencies:
       html-entities: 1.4.0
       lodash: 4.17.21
