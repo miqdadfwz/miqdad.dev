@@ -1,5 +1,21 @@
 {
   "extends": [
     "config:base"
+  ],
+  "prConcurrentLimit": 3,
+  "prCreation": "status-success",
+  "schedule": [
+    "every weekend"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "pin", "digest"],
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    }
   ]
 }
+
