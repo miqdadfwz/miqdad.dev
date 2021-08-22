@@ -1,6 +1,6 @@
 {
   "name": "miqdaddev",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "Miqdad Personal Website",
   "scripts": {
     "clean": "rm -rf ./dist",
