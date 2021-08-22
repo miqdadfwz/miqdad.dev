@@ -1,0 +1,25 @@
+name: CI
+on: [push]
+jobs:
+  lighthouseci:
+    name: Run LH Audit
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install lhci
+        run: npm install && npm install -g @lhci/cli@0.8.x
+
+      - name: build
+        run: npm run build
+
+      - name: run lhci
+        run: lhci autorun --collect.numberOfRuns=1 --assert.assertions.render-blocking-resources="off" --assert.assertions.csp-xss="off"
