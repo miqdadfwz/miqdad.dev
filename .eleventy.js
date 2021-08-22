@@ -4,13 +4,8 @@ const path = require('path');
 const pluginSEO = require('eleventy-plugin-seo');
 const pluginRSS = require('@11ty/eleventy-plugin-rss');
 const pluginGoogleFonts = require('eleventy-google-fonts');
-const pluginNavigation = require('@11ty/eleventy-navigation');
-const pluginTimeToRead = require('eleventy-plugin-time-to-read');
-const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const { DateTime } = require('luxon');
-const markdownIt = require('markdown-it');
-const markdownItAnchor = require('markdown-it-anchor');
 
 const isDev = process.env.NODE_ENV === 'development';
 const manifestPath = path.resolve(__dirname, 'dist', 'assets', 'build.json');
@@ -23,9 +18,7 @@ const manifest = isDev
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginRSS);
-  eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(pluginGoogleFonts);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginSEO, require('./src/data/seo.json'));
 
   eleventyConfig.addLayoutAlias('base', 'base.njk');
@@ -69,37 +62,19 @@ module.exports = (eleventyConfig) => {
       : {}),
   });
 
-  const markdownLibrary = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true,
-  }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: 'direct-link',
-    permalinkSymbol: '#',
-  });
-
-  eleventyConfig.setLibrary('md', markdownLibrary);
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.addFilter('readableDate', (date) => {
     return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat('LLL dd, yyyy');
   });
 
-  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (date) => {
     return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat('yyyy-LL-dd');
   });
 
-  eleventyConfig.addPlugin(pluginTimeToRead, {
-    style: 'short',
-  });
-
   return {
     passthroughFileCopy: true,
-    markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
-    templateFormats: ['md', 'njk', 'html'],
     dir: {
       input: 'src',
       output: 'dist',

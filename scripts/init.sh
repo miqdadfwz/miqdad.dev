@@ -23,12 +23,12 @@ else
     mkdir ssl && cd ssl
     mkcert localhost 127.0.0.1 ::1
     
-    if ! command -v pnpm &> /dev/null; then
-        echo "${CHALK_BLUE}> ${PREFIX} Installing pnpm package manager...${CHALK_RESET}"
-        npm install -g pnpm
+    if ! command -v npm &> /dev/null; then
+        echo "${CHALK_BLUE}> ${PREFIX} Installing npm package manager...${CHALK_RESET}"
+        npm install -g npm
     fi
     
-    pnpm install
+    npm install
 
     echo -e "\n${CHALK_GREEN}> ${PREFIX} You are good to go!${CHALK_RESET}"
     exit;

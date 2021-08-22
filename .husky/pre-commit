@@ -4,9 +4,4 @@
 WORK_TREE="${PWD}/src"
 CHANGED=$(git status ./src --porcelain | wc -l)
 
-if [ "$CHANGED" -ne 0 ]; then
-    npx lighthouse-badges --urls https://miqdad.dev -o ./src/static/lighthouse  
-    git add ./src/static/lighthouse && pnpm run pre-commit
-else
-    pnpm run pre-commit
-fi
+npm run precommit

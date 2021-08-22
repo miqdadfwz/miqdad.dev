@@ -1,10 +1,21 @@
 module.exports = {
-  title: 'miqdad.dev',
-  description: 'Personal website of Miqdad A. Fawwaz. Thoughts on web platform and software engineering',
+  title: 'Miqdad A. Fawwaz',
+  description: 'Personal website of Miqdad A. Fawwaz.',
   url: 'http://miqdad.dev',
-  twitter: 'https://twitter.com/miqdadfwz',
-  github: 'https://github.com/miqdadfwz',
   source: 'https://github.com/miqdadfwz/miqdad.dev',
-  mail: 'mailto:miqdad.fawwaz@gmail.com',
   year: new Date().getFullYear(),
+  navigations: [
+    {
+      title: 'twitter',
+      url: 'https://twitter.com/miqdadfwz',
+    },
+    {
+      title: 'github',
+      url: 'https://github.com/miqdadfwz',
+    },
+    {
+      title: 'email',
+      url: 'mailto:miqdad.fawwaz@gmail.com',
+    },
+  ],
 };

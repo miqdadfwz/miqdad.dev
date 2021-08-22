@@ -13,5 +13,5 @@ check_run() {
 }
 
 # Example usage
-# In this example it's used to run `pnpm install` if package.json changed
-check_run package.json "pnpm install"
+# In this example it's used to run `npm install` if package.json changed
+check_run package.json "npm install"

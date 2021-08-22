@@ -36,9 +36,9 @@ const offlineHandler = async (params: any): Promise<Response> => {
   try {
     return await networkOnly.handle(params);
   } catch (error) {
-    return (caches.match(offlineHTML, {
+    return caches.match(offlineHTML, {
       cacheName: offlineCacheName,
-    }) as unknown) as Response;
+    }) as unknown as Response;
   }
 };
 
