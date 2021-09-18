@@ -42,7 +42,7 @@
     "@typescript-eslint/parser": "4.31.1",
     "autoprefixer": "10.3.4",
     "cross-env": "7.0.3",
-    "css-loader": "6.2.0",
+    "css-loader": "6.3.0",
     "cssnano": "5.0.8",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-google-fonts": "0.0.5",
