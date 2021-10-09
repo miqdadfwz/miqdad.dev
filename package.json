@@ -33,7 +33,7 @@
   "homepage": "https://github.com/miqdadfwz/miqdad.dev#readme",
   "devDependencies": {
     "@11ty/eleventy": "0.12.1",
-    "@11ty/eleventy-plugin-rss": "1.1.1",
+    "@11ty/eleventy-plugin-rss": "1.1.2",
     "@commitlint/cli": "13.2.0",
     "@commitlint/config-conventional": "13.2.0",
     "@tailwindcss/typography": "0.4.1",
