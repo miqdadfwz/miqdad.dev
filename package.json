@@ -49,7 +49,7 @@
     "eleventy-plugin-seo": "0.5.2",
     "eleventy-plugin-time-to-read": "1.1.1",
     "esbuild-loader": "2.16.0",
-    "eslint": "8.0.1",
+    "eslint": "8.1.0",
     "eslint-config-google": "0.14.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
