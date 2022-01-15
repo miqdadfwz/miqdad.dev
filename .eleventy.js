@@ -19,23 +19,23 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addLayoutAlias('base', 'base.njk');
   eleventyConfig.addLayoutAlias('post', 'post.njk');
 
-  eleventyConfig.addShortcode('bundledCSS', function () {
+  eleventyConfig.addNunjucksShortcode('bundledCSS', function () {
     return manifest['main.css'] ? `<link href="${manifest['main.css']}" rel="stylesheet"></link>` : '';
   });
 
-  eleventyConfig.addShortcode('bundledJS', function () {
+  eleventyConfig.addNunjucksShortcode('bundledJS', function () {
     return manifest['main.js'] ? `<script defer="defer" src="${manifest['main.js']}"></script>` : '';
   });
 
-  eleventyConfig.addShortcode('preloadCSS', function () {
+  eleventyConfig.addNunjucksShortcode('preloadCSS', function () {
     return manifest['main.css'] ? `<link rel="preload" href="${manifest['main.css']}" as="style"></link>` : '';
   });
 
-  eleventyConfig.addShortcode('preloadJS', function () {
+  eleventyConfig.addNunjucksShortcode('preloadJS', function () {
     return manifest['main.js'] ? `<link rel="preload" href="${manifest['main.js']}" as="script"></link>` : '';
   });
 
-  eleventyConfig.addShortcode('version', function () {
+  eleventyConfig.addNunjucksShortcode('version', function () {
     try {
       return require('./package.json').version || '0.0.1';
     } catch {
