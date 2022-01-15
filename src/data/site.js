@@ -14,6 +14,10 @@ module.exports = {
       url: 'https://github.com/miqdadfwz',
     },
     {
+      title: 'goodreads',
+      url: 'https://www.goodreads.com/user/show/119193055-miqdad',
+    },
+    {
       title: 'email',
       url: 'mailto:miqdad.fawwaz@gmail.com',
     },

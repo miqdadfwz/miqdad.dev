@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 
 const pluginSEO = require('eleventy-plugin-seo');
-const pluginRSS = require('@11ty/eleventy-plugin-rss');
 const pluginGoogleFonts = require('eleventy-google-fonts');
 
 const { DateTime } = require('luxon');
@@ -10,14 +9,10 @@ const { DateTime } = require('luxon');
 const isDev = process.env.NODE_ENV === 'development';
 const manifestPath = path.resolve(__dirname, 'dist', 'assets', 'build.json');
 const manifest = isDev
-  ? {
-      'main.js': '/assets/index.js',
-      'main.css': '/assets/index.css',
-    }
+  ? { 'main.js': '/assets/index.js', 'main.css': '/assets/index.css' }
   : JSON.parse(fs.readFileSync(manifestPath, { encoding: 'utf8' }));
 
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPlugin(pluginRSS);
   eleventyConfig.addPlugin(pluginGoogleFonts);
   eleventyConfig.addPlugin(pluginSEO, require('./src/data/seo.json'));
 
