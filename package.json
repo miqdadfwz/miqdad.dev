@@ -67,13 +67,13 @@
     "webpack-manifest-plugin": "4.1.1"
   },
   "dependencies": {
-    "workbox-cacheable-response": "6.4.2",
-    "workbox-expiration": "6.4.2",
-    "workbox-navigation-preload": "6.4.2",
-    "workbox-precaching": "6.4.2",
-    "workbox-routing": "6.4.2",
-    "workbox-strategies": "6.4.2",
-    "workbox-webpack-plugin": "6.4.2"
+    "workbox-cacheable-response": "6.5.0",
+    "workbox-expiration": "6.5.0",
+    "workbox-navigation-preload": "6.5.0",
+    "workbox-precaching": "6.5.0",
+    "workbox-routing": "6.5.0",
+    "workbox-strategies": "6.5.0",
+    "workbox-webpack-plugin": "6.5.0"
   },
   "lint-staged": {
     "*.{css,html,json,js,ts}": [
