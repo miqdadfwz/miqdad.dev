@@ -6,10 +6,6 @@ module.exports = {
   year: new Date().getFullYear(),
   navigations: [
     {
-      title: 'twitter',
-      url: 'https://twitter.com/miqdadfwz',
-    },
-    {
       title: 'github',
       url: 'https://github.com/miqdadfwz',
     },
