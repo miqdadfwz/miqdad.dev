@@ -30,7 +30,7 @@
     "@11ty/eleventy": "1.0.1",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "@tailwindcss/typography": "0.5.2",
+    "@tailwindcss/typography": "0.5.3",
     "@types/node": "15.0.1",
     "@typescript-eslint/eslint-plugin": "5.30.4",
     "@typescript-eslint/parser": "5.30.4",
