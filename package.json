@@ -39,7 +39,7 @@
     "css-loader": "6.7.3",
     "cssnano": "5.1.14",
     "cz-conventional-changelog": "3.3.0",
-    "eleventy-google-fonts": "0.0.5",
+    "eleventy-google-fonts": "0.1.0",
     "eleventy-plugin-seo": "0.5.2",
     "esbuild-loader": "2.20.0",
     "eslint": "8.30.0",
