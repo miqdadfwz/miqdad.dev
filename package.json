@@ -37,7 +37,7 @@
     "autoprefixer": "10.4.14",
     "cross-env": "7.0.3",
     "css-loader": "6.7.3",
-    "cssnano": "5.1.15",
+    "cssnano": "6.0.0",
     "cz-conventional-changelog": "3.3.0",
     "eleventy-google-fonts": "0.1.0",
     "eleventy-plugin-seo": "0.5.2",
