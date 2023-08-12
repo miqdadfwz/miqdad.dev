@@ -42,7 +42,7 @@
     "eleventy-google-fonts": "0.1.0",
     "eleventy-plugin-seo": "0.5.2",
     "esbuild-loader": "2.21.0",
-    "eslint": "8.41.0",
+    "eslint": "8.47.0",
     "eslint-config-google": "0.14.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-prettier": "4.2.1",
