@@ -49,7 +49,7 @@
     "husky": "8.0.3",
     "lint-staged": "13.3.0",
     "luxon": "3.4.4",
-    "mini-css-extract-plugin": "2.7.6",
+    "mini-css-extract-plugin": "2.9.0",
     "npm-run-all2": "5.0.2",
     "postcss": "8.4.39",
     "postcss-loader": "7.3.4",
