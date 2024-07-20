@@ -45,7 +45,7 @@
     "eslint": "9.7.0",
     "eslint-config-google": "0.14.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-prettier": "5.2.1",
     "husky": "8.0.3",
     "lint-staged": "13.3.0",
     "luxon": "3.4.4",
